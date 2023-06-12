@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <header>you can do it</header>
+
+    <div class="form">
+        <form action="/addwork" method="post">
+            <input type="text" id="work"  name="work" placeholder="Add a task" required><button
+                type="submit">Add</button>
+        </form>
+    </div>
+
+    <div class="list">
+            <ul >
+                <%for(let i=0;i<lists.length;i++){ %>
+
+                    <li class="worklist">
+                        <p  class="list_work">
+                            <%=lists[i].work%>
+                        </p>
+                        <p></p>
+                        <p>
+                            <i  class="edit material-icons">edit</i>
+                            <a href="/delete?i=<%=i%>"><i class="material-icons">delete</i></a>
+                        </p>
+                    </li>
+                    <% } %>
+            </ul>
+    </div>
+
+</body>
+
+</html>
