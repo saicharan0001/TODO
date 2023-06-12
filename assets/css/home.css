@@ -61,7 +61,7 @@ body{
     font-weight: bold;
     border-radius:20px;
     padding:10px;
-    margin:5px;
+    margin:6px;
     display: flex;
     justify-content: space-between;
 }
